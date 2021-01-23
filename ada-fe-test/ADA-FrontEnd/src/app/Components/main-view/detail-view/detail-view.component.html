@@ -1,0 +1,14 @@
+<div class="mt-5 detail-view pr-3">
+  <div class="mt-4 mb-4" *ngFor="let item of titleSpecificData && titleSpecificData[0]?.content; let i = index">
+    <div *ngIf="item.type==='text'"class="card border shadow-sm p-3 bg-white rounded"><p class="text-center p-0 m-0 mb-3">{{item.type}}</p>
+      <div class="card border shadow-sm p-3 bg-white rounded"><p [innerHTML]="item.body | highlight: highlightValue"></p>
+      </div>
+    </div>
+    <div *ngIf="item.type==='image'"class="card border shadow-sm p-3 bg-white rounded"><p class="text-center p-0 m-0 mb-3">{{item.type}}</p>
+      <div class="card border shadow-sm p-3 bg-white rounded"><img class="img-fluid img-thumbnail rounded mx-auto d-block" width="100" height="100" [src]="item.url"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+

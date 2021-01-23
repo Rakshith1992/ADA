@@ -1,0 +1,9 @@
+@import "./../../../scss/main";
+
+.container-fluid {
+  height: 3rem;
+  background: $pink;
+  img {
+    margin-top: 0.75rem;
+  }
+}

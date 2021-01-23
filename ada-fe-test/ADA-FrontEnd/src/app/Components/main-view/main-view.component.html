@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="sidebar ml-4 col-3 card">
+    <div class="search-bar">
+      <div class="form-group has-search">
+        <span class="fa fa-search form-control-feedback"></span>
+        <input type="text" class="form-control" (keyup)="applyFilter($event)" placeholder="Search">
+      </div>
+    </div>
+    <div>
+      <kendo-treeview
+        [nodes]="sideViewData"
+        textField="title"
+        kendoTreeViewExpandable
+        kendoTreeViewHierarchyBinding
+        childrenField="items"
+        (expand)="onExpand($event)"
+        (selectionChange)="getDetailView($event)"
+      >
+      </kendo-treeview>
+    </div>
+  </div>
+  <div *ngIf="displayDetailView" class="detailbar ml-4 col-8 card">
+    <app-detail-view></app-detail-view>
+  </div>
+</div>

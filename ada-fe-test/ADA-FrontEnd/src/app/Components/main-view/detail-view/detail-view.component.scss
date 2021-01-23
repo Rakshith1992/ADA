@@ -1,0 +1,7 @@
+@import "./../../../../scss/main";
+
+.detail-view {
+  overflow-y: auto;
+  height: 42rem;
+  @include scroll(1.5rem);
+}

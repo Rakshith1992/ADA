@@ -1,0 +1,19 @@
+
+@mixin scroll($margin-top) {
+  &::-webkit-scrollbar-track {
+    margin-top: $margin-top;
+    display: hidden;
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px $rgba-grey;
+    -webkit-box-shadow: inset 0 0 6px $rgba-grey;
+    background-color: $gray;
+  }
+  scrollbar-color: $rgba-grey $white!important;
+  scrollbar-width: thin !important;
+}
